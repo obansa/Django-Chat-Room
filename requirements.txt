@@ -1,3 +1,4 @@
-Django
+Django==3.2.16
 channels==3.0.4
-redis
+redis==4.3.5
+whitenoise==6.3.0

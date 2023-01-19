@@ -1,4 +1,4 @@
-let url = `ws://${window.location.host}/ws/${CHANNEL}/`
+let url = `wss://${window.location.host}/ws/${CHANNEL}/`
 id = Date.now()
 
 const chatSocket = new WebSocket(url)

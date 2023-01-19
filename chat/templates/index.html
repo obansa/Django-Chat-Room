@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    {% load static %}
+    <html lang="en">
+       <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <!-- Essential Links -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+           <!-- External Css File -->
+           <link rel="stylesheet" href="{% static 'css/index.css' %}">
+           <title>Tidi</title>
+        </head>
+       <body>
+           <div class="container px-5 py-5 mx-auto" style="margin: auto;">
+
+                <div class="card card1" style="border-radius:25px">
+
+                   <div class=" my-1" style="border-radius:25px">
+                   <div class="row justify-content-center px-1 mb-1"> <img id="logo" src="{%static 'img/chat.png'%}"> </div>
+                   <h3 class="mb-2 text-center heading">MY Chat</h3>
+                   <h6 class="msg-info text-center">A Chat Room application made just for you</h6>
+                   <form action="" method="post">
+                       {% csrf_token %}
+                       <div class="form-group"> <label class="form-control-label text-muted">Username</label> <input type="text" id="username" required name="username" placeholder="Enter Username" class="form-control"> </div>
+                       <div class="form-group"> <label class="form-control-label text-muted">Room name</label>
+                           <input type="text" oninput="this.value = this.value.toUpperCase()" id="room_name" name="room_name" placeholder="Enter Room Name" class="form-control" required> </div>
+                       <div class="row justify-content-center my-3 px-3"> <button class="btn-block btn-color">Join Room</button></div>
+                   </form>
+                </div>
+           </div>
+           </div>
+       </body>
+
+
+   </html>
+
+
